@@ -5,21 +5,21 @@
 class Forge < Formula
   desc "CLI da Internal Developer Platform: gera projetos padronizados a partir dos templates oficiais."
   homepage "https://github.com/matheusbrauna/forge"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/matheusbrauna/forge/releases/download/v0.1.1/forge_0.1.1_darwin_amd64.tar.gz"
-      sha256 "4e41200c46964324ab290b7d26cd4243850323fec322d80ed5fc7bbf95aea7df"
+      url "https://github.com/matheusbrauna/forge/releases/download/v0.2.0/forge_0.2.0_darwin_amd64.tar.gz"
+      sha256 "507ad8f0841be05e2ca5a25e5e54f2a87e0c6df06f2839b35c6ca63463cc18f2"
 
       define_method(:install) do
         bin.install "forge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/matheusbrauna/forge/releases/download/v0.1.1/forge_0.1.1_darwin_arm64.tar.gz"
-      sha256 "24f06c0e2ab8ab837e96e5e700d7ff05a85b02b138834753762cbf6a3841c526"
+      url "https://github.com/matheusbrauna/forge/releases/download/v0.2.0/forge_0.2.0_darwin_arm64.tar.gz"
+      sha256 "004b80e3e7a9a76dea790ecf8ec3c9f54bb58e82859ec18d6009fd8ecd646ecb"
 
       define_method(:install) do
         bin.install "forge"
@@ -29,15 +29,15 @@ class Forge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/matheusbrauna/forge/releases/download/v0.1.1/forge_0.1.1_linux_amd64.tar.gz"
-      sha256 "7e9406743fda917bd96a75f6882c615e6a920ed55bb2432b38dca1aa994dc775"
+      url "https://github.com/matheusbrauna/forge/releases/download/v0.2.0/forge_0.2.0_linux_amd64.tar.gz"
+      sha256 "52249501641f6cedc843b172cfcbc1564459ed5879b0b254bb2ad431d0e8bca3"
       define_method(:install) do
         bin.install "forge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/matheusbrauna/forge/releases/download/v0.1.1/forge_0.1.1_linux_arm64.tar.gz"
-      sha256 "459e71c46dd6f6c74edea24287d11f71cc5dc11007a0e6c8c95662f607205971"
+      url "https://github.com/matheusbrauna/forge/releases/download/v0.2.0/forge_0.2.0_linux_arm64.tar.gz"
+      sha256 "7738d2aa48142461476c1b5dbefc310dba73d9b4a845977bc8de748cf9512aa2"
       define_method(:install) do
         bin.install "forge"
       end
